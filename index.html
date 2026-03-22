@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StreamX</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #0f0f0f;
+    color: white;
+}
+
+/* NAVBAR */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background: rgba(0,0,0,0.8);
+    position: sticky;
+    top: 0;
+}
+
+nav h1 {
+    color: #8B0000;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav ul li {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+nav ul li:hover {
+    color: #a00000;
+}
+
+/* HERO */
+.hero {
+    height: 80vh;
+    background: url("https://picsum.photos/1600/800") no-repeat center/cover;
+    display: flex;
+    align-items: center;
+    padding: 50px;
+}
+
+.hero-content {
+    max-width: 500px;
+}
+
+.hero h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    margin-bottom: 20px;
+    color: #ccc;
+}
+
+.hero button {
+    padding: 10px 20px;
+    background: #8B0000;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hero button:hover {
+    background: #a00000;
+}
+
+/* SECTION */
+.section {
+    padding: 40px 50px;
+}
+
+.section h2 {
+    margin-bottom: 20px;
+}
+
+/* MOVIE ROW */
+.row {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+}
+
+.card {
+    min-width: 200px;
+    height: 300px;
+    background: #222;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 20px rgba(139,0,0,0.6);
+}
+
+/* VIDEO PLAYER */
+.player {
+    padding: 50px;
+    text-align: center;
+}
+
+video {
+    width: 70%;
+    border-radius: 10px;
+}
+
+/* LOGIN FORM */
+.form-container {
+    width: 300px;
+    margin: 50px auto;
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.form-container h2 {
+    margin-bottom: 15px;
+}
+
+.form-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.form-container button {
+    width: 100%;
+    padding: 10px;
+    background: #8B0000;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-container button:hover {
+    background: #a00000;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #000;
+    margin-top: 50px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <h1>StreamX</h1>
+    <ul>
+        <li>Home</li>
+        <li>Movies</li>
+        <li>Series</li>
+        <li>Login</li>
+    </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-content">
+        <h2>Watch Something Amazing</h2>
+        <p>Stream your favorite content anytime, anywhere.</p>
+        <button>Play Now</button>
+    </div>
+</section>
+
+<!-- TRENDING -->
+<section class="section">
+    <h2>Trending</h2>
+    <div class="row">
+        <div class="card"><img src="https://picsum.photos/200/300?1"></div>
+        <div class="card"><img src="https://picsum.photos/200/300?2"></div>
+        <div class="card"><img src="https://picsum.photos/200/300?3"></div>
+        <div class="card"><img src="https://picsum.photos/200/300?4"></div>
+        <div class="card"><img src="https://picsum.photos/200/300?5"></div>
+    </div>
+</section>
+
+<!-- LATEST -->
+<section class="section">
+    <h2>Latest Releases</h2>
+    <div class="row">
+        <div class="card"><img src="https://picsum.photos/200/300?6"></div>
+        <div class="card"><img src="https://picsum.photos/200/300?7"></div>
+        <div class="card"><img src="https://picsum.photos/200/300?8"></div>
+        <div class="card"><img src="https://picsum.photos/200/300?9"></div>
+    </div>
+</section>
+
+<!-- VIDEO PLAYER -->
+<section class="player">
+    <h2>Now Playing</h2>
+    <video controls>
+        <source src="sample.mp4" type="video/mp4">
+    </video>
+</section>
+
+<!-- LOGIN -->
+<div class="form-container">
+    <h2>Login</h2>
+    <input type="text" placeholder="Email">
+    <input type="password" placeholder="Password">
+    <button>Login</button>
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 StreamX. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
